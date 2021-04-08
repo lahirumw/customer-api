@@ -1,6 +1,0 @@
-
-CREATE TABLE Customers(
-   id     INTEGER  NOT NULL PRIMARY KEY 
-  ,name   VARCHAR2(50) NOT NULL
-  ,url    VARCHAR2(256) NOT NULL
-);

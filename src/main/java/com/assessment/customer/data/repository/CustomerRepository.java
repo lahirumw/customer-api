@@ -10,7 +10,7 @@ import com.assessment.customer.data.entity.Customers;
 @Repository
 public interface CustomerRepository extends CrudRepository<Customers, Long> {
 
-    Slice<Customers> findByNameContaining(String name, Pageable page);
+    Slice<Customers> findByNameContainingIgnoreCase(String name, Pageable page);
     
     Slice<Customers> findAll(Pageable page);
 }

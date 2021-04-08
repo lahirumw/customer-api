@@ -74,7 +74,7 @@ public class CustomerServiceTest {
 	list.add(customers);
 	Slice<Customers> content = new SliceImpl<>(list, paging, false);
 	System.out.println(content);
-	Mockito.when(customerRepository.findByNameContaining(Mockito.anyString(), Mockito.any(Pageable.class)))
+	Mockito.when(customerRepository.findByNameContainingIgnoreCase(Mockito.anyString(), Mockito.any(Pageable.class)))
 		.thenReturn(content);
 
 	Slice<Customers> result = customerService.getCustomer("Homer Simpson", paging);

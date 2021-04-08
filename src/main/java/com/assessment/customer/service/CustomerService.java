@@ -28,7 +28,7 @@ public class CustomerService {
     public Slice<Customers> getCustomer(String name, Pageable paging) {
 
 	if (name != null) {
-	    return customerRepository.findByNameContaining(name, paging);
+	    return customerRepository.findByNameContainingIgnoreCase(name, paging);
 	}
 	else {
 	    return customerRepository.findAll(paging);
