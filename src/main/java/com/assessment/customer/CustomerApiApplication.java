@@ -14,6 +14,7 @@ import org.springframework.context.annotation.PropertySource;
 public class CustomerApiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CustomerApiApplication.class, args);
 	}
 
